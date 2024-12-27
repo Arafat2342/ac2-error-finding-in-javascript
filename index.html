@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h3>Let's find an error.</h3>
+
+    <p id="error"></p>
+    <p id="not_error"></p>
+    <p id="error2"></p>
+
+    <script>
+    try {
+         alert("Hello world");
+         const correct = "This is not an error";
+         var num = eval(3 +  4);
+        document.getElementById("not_error").innerHTML = correct;
+    }
+    
+    catch(err){
+
+        document.getElementById("error").innerHTML = err.message;
+        document.getElementById("error2").innerHTML = num;
+
+    }
+    </script>
+</body>
+</html>
